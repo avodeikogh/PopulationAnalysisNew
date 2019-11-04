@@ -34,7 +34,6 @@ def color_splash(image, mask):
     black.fill(0)
     mask = (np.sum(mask, -1, keepdims=True) >= 1)
     if mask.shape[0] > 0:
-        print("lol")
         splash = np.where(mask, 255, 0).astype(np.uint8)
     else:
         splash = black
